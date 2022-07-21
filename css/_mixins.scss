@@ -1,0 +1,81 @@
+
+@mixin square-img{
+    width: $square;
+    height: $square;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+//Testomonial
+@mixin screen-with-porto{
+    //standard width = 400px
+    // flex-direction: column 1;
+    .porto-img{
+        width: 95%;
+    }
+
+    @media screen and (min-width:401px) {
+        flex-direction: column 2;
+        .porto-img{
+            width: 230px;
+        }
+    }
+    @media screen and (min-width:768px) {
+        flex-direction: column 3;
+    }
+    @media screen and (min-width:1024px) {
+        flex-direction: column 3;
+        .porto-img{
+            width: 260px;
+        }
+    }
+}
+
+@mixin image-screen-width{
+    @media screen and (min-width:401px) {
+        width: calc($square2 * $square3);
+        height: calc($square2 * $square3);
+    }
+    
+}
+@mixin hyperlinks{
+    text-decoration: none;
+    color: $page-backgr;
+    transition:background-color 300ms ease-out;
+    position: relative;
+    padding: 5px;
+    border-radius: 15px;
+    &:hover{
+        background-color: $text-backgr;
+        // border-radius: 15px;
+    }
+    &:visited{
+        color: $page-backgr;
+    }
+}
+
+//Portfolio
+@mixin porto-img-hover{
+    &:hover{
+        opacity: 0.1;
+        z-index: -1;
+    }
+}
+
+@mixin btn-property{
+    width: 100px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.247);
+    color: #fff;
+    border: none;
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    right: 0;
+    bottom: 0;
+    // z-index: -1;
+    &:hover{
+        background-color: rgba(0, 0, 0, 0.692);
+        z-index: 1;
+    }
+}
