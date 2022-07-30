@@ -112,7 +112,7 @@ body {
   background-color: rgba(0, 0, 0, 0);
 }
 .container:hover::before {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.9);
 }
 
 img {
@@ -120,7 +120,6 @@ img {
 }
 
 .btn {
-  background-color: rgb(134, 195, 235);
   font-size: 15px;
   font-weight: 600;
   padding: 10px;
@@ -136,7 +135,7 @@ img {
   cursor: pointer;
 }
 .btn:hover {
-  background-color: chartreuse;
+  background-color: #686de0;
 }
 
 .container:hover .btn {

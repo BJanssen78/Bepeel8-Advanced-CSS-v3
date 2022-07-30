@@ -47,7 +47,6 @@
     border-radius: 15px;
     &:hover{
         background-color: $text-backgr;
-        // border-radius: 15px;
     }
     &:visited{
         color: $page-backgr;
@@ -66,7 +65,6 @@
     bottom: 180px;
     font-size: 25px;
     z-index: 1;
-    // position: relative;
     
     .social-list{ //ul
         display: flex;
@@ -92,7 +90,6 @@
             a{
                 text-decoration: none;
                 &:hover{
-                    // width: 200px;
                     text-align: left;
                     padding-left: 5px;
                     &::after{
@@ -119,12 +116,12 @@
         background-color: rgba(0, 0, 0, 0);
     }
     &:hover::before{
-        background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 0.9);
     }
 }
 
 @mixin button{
-    background-color: $btn-bg-clr;
+    // background-color: $btn-bg-clr;
     font-size: 15px;
     font-weight: 600;
     padding: 10px;
@@ -140,6 +137,6 @@
     cursor: pointer;
 
     &:hover{
-        background-color: chartreuse;
+        background-color: $footer-backgr;
     }
 }
