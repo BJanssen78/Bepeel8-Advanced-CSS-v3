@@ -2,37 +2,34 @@
 @import "./mixins";
 
 body{
-    // @include grid-page;
     background-color:$page-backgr;
     font-size: $cont-font-size;
     text-align: center;
     margin: 0;
     padding: 0;
-    // overflow: hidden;
 }
 .section-canvas{
     background-color: $text-backgr;
+    font-size: 20px;
     margin: 25px auto;
-    max-width: 70%;
-    // height: 300px;
+    width: 300px;
     border-radius: 25px;
     padding: 20px;
     position: relative;
-    // z-index: -1;
     .tekst{
-        // position: absolute;
-        // z-index: 1;
-        height: 380px;
+        // font-size: 20px;
+        height: 300px;
+        z-index: 1;
+        margin-bottom: 50px;
     }
     .image{
         @include square-img;
-        @include image-screen-width;
         border: 10px solid #fff;
         position: absolute;
         top: 40%;
         bottom: 0;
         right: 0;
-        left: 22%;
+        left: 25%;
         z-index: 1;
     }
     &::after{
@@ -47,8 +44,6 @@ body{
         bottom: 0;
         right: 0;
         left: 0;
-        // transform: translate(-6.1%, -90%);
-        // z-index: 0;
     }
     p{
         position: relative;
@@ -56,36 +51,69 @@ body{
         a{
             @include hyperlinks;
             
-            }
-    }
-}
-.test{
-    width: 100%;
-    height: 50px;
-    background-color: #fff;
-    padding: 25px;
-    a{
-        @include hyperlinks;
-    }
-    
-}
-.portfolio{
-    max-width: 70%;
-    margin: 0 auto;
-    display: flex;
-    gap: 25px;
-    flex-direction: column ;
-    @include screen-with-porto;
-    .foto-btn{
-        position: relative;
-        .porto-img{
-            @include porto-img-hover;
         }
     }
 }
-.img-btn{
-    @include btn-property;
+
+.portfolio{
+    display: grid;
+    position: relative;
+    max-width: 70%;
+    margin: 10px auto;
+    gap: 10px;
+    @include screen-with-porto;
+
+    .foto-btn{
+        position: relative;
+        background-color: rgba(0, 0, 0, 1);
+        
+        .porto-img{
+            background-color: rgba(0, 0, 0, 1);
+        }
+
+        a{
+            position: absolute;
+            top: 50%;
+            left: 35%;
+            z-index: 1;
+            opacity: 0;
+
+            .img-btn{
+                @include button-prop;
+            }
+        }
+        .porto-img:hover{
+            opacity: 0;
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+    }
 }
+.porto-img:hover, a{
+    opacity: 1;
+}
+
 .social-links{
-    display: none;
+    @include social;
+    .social-list{
+        padding: 0;
+    }
+    .linkedin{
+        background-color:$social-linkedin;
+    }
+    .facebook{
+        background-color: $social-facebook;
+    }
+    .github{
+        background-color: $social-github;
+    }
+    .twitter{
+        background-color: $social-twitter;
+    }
+    .blog{
+        background-color: $social-blog;
+    }
+    .social-link{
+        color: white;
+    }
+    
 }
