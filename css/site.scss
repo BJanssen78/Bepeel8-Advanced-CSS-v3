@@ -54,40 +54,25 @@ body{
         }
     }
 }
-
 .portfolio{
-    display: grid;
-    position: relative;
-    max-width: 70%;
-    margin: 10px auto;
-    gap: 10px;
-    @include screen-with-porto;
-
-    .foto-btn{
-        position: relative;
-        background-color: rgba(0, 0, 0, 1);
-        
-        .porto-img{
-            background-color: rgba(0, 0, 0, 1);
-        }
-
-        a{
-            position: absolute;
-            top: 50%;
-            left: 35%;
-            z-index: 1;
-            opacity: 0;
-
-            .img-btn{
-                @include button-prop;
-            }
-        }
-        .porto-img:hover{
-            opacity: 0;
-            background-color: rgba(0, 0, 0, 0.9);
-        }
-    }
+    @include section-grid;
+    justify-items: center;
 }
+.container{
+    position: relative;
+    width: 200px;
+    @include container;
+}
+img{
+    width: 100%;
+}
+.btn{
+    @include button;
+}
+.container:hover .btn{
+    opacity: 1;
+}
+
 .porto-img:hover, a{
     opacity: 1;
 }
