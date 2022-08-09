@@ -8,7 +8,11 @@ body{
     margin: 0;
     padding: 0;
 }
-.section-canvas{
+img{
+    width: 100%;
+}
+
+.testemonial{
     background-color: $text-backgr;
     font-size: 20px;
     margin: 25px auto;
@@ -16,13 +20,13 @@ body{
     border-radius: 25px;
     padding: 20px;
     position: relative;
-    .tekst{
+    .testemonial-tekst{
         // font-size: 20px;
         height: 300px;
         z-index: 1;
         margin-bottom: 50px;
     }
-    .image{
+    .testemonial-image-round{
         @include square-img;
         border: 10px solid #fff;
         position: absolute;
@@ -54,32 +58,27 @@ body{
         }
     }
 }
+
 .portfolio{
     @include section-grid;
     justify-items: center;
-}
-.container{
-    position: relative;
-    width: 200px;
-    @include container;
-}
-img{
-    width: 100%;
-}
-.btn{
-    @include button;
-}
-.container:hover .btn{
-    opacity: 1;
-}
-
-.porto-img:hover, a{
-    opacity: 1;
+    
+    .portfolio-container{
+        position: relative;
+        width: 200px;
+        @include container;
+        .portfolio-container-btn{
+            @include button;
+        }
+    }
+    .portfolio-container:hover .portfolio-container-btn{
+        opacity: 1;
+    }
 }
 
 .social-links{
     @include social;
-    .social-list{
+    .social-links--list{
         padding: 0;
     }
     .linkedin{
@@ -97,7 +96,7 @@ img{
     .blog{
         background-color: $social-blog;
     }
-    .social-link{
+    .social-links--list-items-link{
         color: white;
     }
     
