@@ -78,6 +78,8 @@ img{
 
 .social-links{
     @include social;
+    width: 60px;
+    float: right;
     .social-links--list{
         padding: 0;
     }
